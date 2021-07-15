@@ -1,0 +1,273 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MycrocastSDK
+import AVFoundation
+import MycrocastSDK.CLibgif
+import Foundation
+import MQTTClient
+@_exported import MycrocastSDK
+import Swift
+import SystemConfiguration
+import UIKit
+@_hasMissingDesignatedInitializers final public class Mycrocast {
+  public static let shared: MycrocastSDK.Mycrocast
+  final public var sessionEstablished: Swift.Bool {
+    get
+  }
+  final public var chat: MycrocastSDK.Chat {
+    get
+  }
+  final public var streams: MycrocastSDK.Streams {
+    get
+  }
+  final public var sessionControl: MycrocastSDK.SessionControl {
+    get
+  }
+  final public var rating: MycrocastSDK.Rating {
+    get
+  }
+  final public var advertisements: MycrocastSDK.Advertisements {
+    get
+  }
+  final public func start(apiKey: Swift.String, customerToken: Swift.String, callback: @escaping ([MycrocastSDK.LiveStream], MycrocastSDK.MycrocastError?) -> ())
+  final public func terminate()
+  @objc deinit
+}
+public protocol Streams {
+  func getStreams() -> [MycrocastSDK.LiveStream]
+  func addObserver(_ delegate: MycrocastSDK.StreamsDelegate)
+  func removeObserver(_ delegate: MycrocastSDK.StreamsDelegate)
+  func getStream(streamId: Swift.Int) -> MycrocastSDK.LiveStream?
+  func requestStreams(_ callback: @escaping ([MycrocastSDK.LiveStream]) -> ())
+}
+public protocol StreamsDelegate {
+  func onStreamAdded(stream: MycrocastSDK.LiveStream)
+  func onStreamUpdated(stream: MycrocastSDK.LiveStream)
+  func onStreamRemoved(stream: MycrocastSDK.LiveStream)
+}
+public protocol AdvertisementDelegate {
+  func onAdvertisementAvailable()
+}
+public enum SessionState {
+  case idle
+  case connecting
+  case reconnecting
+  case playing
+  case pausing
+  case paused
+  case stopping
+  case stopped
+  case failed
+  case lost
+  public static func == (a: MycrocastSDK.SessionState, b: MycrocastSDK.SessionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol StreamSessionDelegate {
+  func onSessionStateUpdate(_ state: MycrocastSDK.SessionState)
+  func onAudioDataAvailable(data: AVFAudio.AVAudioPCMBuffer, duration: Swift.Int)
+  func streamerMuted(_ stream: MycrocastSDK.LiveStream)
+  func streamerUnMuted(_ stream: MycrocastSDK.LiveStream)
+}
+public class MycrocastError {
+  public init(_ errorType: MycrocastSDK.ErrorType, description: Swift.String)
+  @objc deinit
+}
+public enum ErrorType {
+  case authentication
+  case connection
+  case security
+  case stream
+  case generic
+  public static func == (a: MycrocastSDK.ErrorType, b: MycrocastSDK.ErrorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ErrorReceiving {
+  func onMycrocastError(_ error: MycrocastSDK.MycrocastError)
+}
+public protocol SessionControl {
+  func play(streamId: Swift.Int) -> Swift.Bool
+  func stop()
+  func currentStatus() -> MycrocastSDK.SessionState
+  func currentPlaying(streamId: Swift.Int) -> Swift.Bool
+  func addObserver(streamDelegate: MycrocastSDK.StreamSessionDelegate)
+  func removeObserver(streamDelegate: MycrocastSDK.StreamSessionDelegate)
+  func addObserver(errorDelegate: MycrocastSDK.ErrorReceiving)
+  func removeObserver(errorDelegate: MycrocastSDK.ErrorReceiving)
+}
+public enum UserStreamRating : Swift.String, Swift.Codable {
+  case neutral
+  case positive
+  case negative
+  public init(from decoder: Swift.Decoder) throws
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Team : Swift.Codable {
+  public var name: Swift.String
+  public var score: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class LiveStream {
+  public var id: Swift.Int
+  public var description: Swift.String
+  public var genre: Swift.String
+  public var language: MycrocastSDK.StreamLanguage
+  public var myStreamRating: MycrocastSDK.UserStreamRating
+  public var listeners: Swift.Int
+  public var startTime: Swift.Int
+  public var muted: Swift.Bool
+  public var likes: Swift.Int
+  public var dislikes: Swift.Int
+  public var title: Swift.String
+  public var streamer: MycrocastSDK.Streamer
+  public var muteMusicUrl: Swift.String
+  @objc deinit
+}
+extension LiveStream {
+  public func header() -> Foundation.URL?
+  public func logo() -> Foundation.URL?
+}
+@_hasMissingDesignatedInitializers public class LiveScoringStream : MycrocastSDK.LiveStream {
+  final public let homeTeam: MycrocastSDK.Team
+  final public let guestTeam: MycrocastSDK.Team
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MycrocastAdvertisement {
+  public var id: Swift.Int
+  public var audioFileUrl: Swift.String
+  public var duration: Swift.Int
+  public var advertisementDescription: Swift.String
+  public var bannerTargetUrl: Swift.String?
+  public var bannerFileUrl: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MycrocastAssetProvider {
+  public static func like() -> UIKit.UIImage
+  public static func play() -> UIKit.UIImage
+  public static func pause() -> UIKit.UIImage
+  public static func muted() -> UIKit.UIImage
+  public static func umuted() -> UIKit.UIImage
+  public static func listener() -> UIKit.UIImage
+  @objc deinit
+}
+public struct StreamLanguage : Swift.Decodable {
+  public var language: Swift.String
+  public var native: Swift.String
+  public var languageCode: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class Streamer {
+  public var id: Swift.Int
+  public var streamerName: Swift.String
+  public var likes: Swift.Int
+  public var dislikes: Swift.Int
+  @objc deinit
+}
+public struct Message {
+  public var id: Swift.Int
+  public var message: Swift.String
+  public var senderName: Swift.String
+  public var creationTime: Foundation.Date
+  public var senderId: Swift.Int
+  public var streamId: Swift.Int
+}
+public enum Sender {
+  case myself
+  case streamer
+  case other
+  public static func == (a: MycrocastSDK.Sender, b: MycrocastSDK.Sender) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Message {
+  public func getSender() -> MycrocastSDK.Sender
+}
+public protocol Chat {
+  func joinChat(streamId: Swift.Int, callback: @escaping ([MycrocastSDK.Message], MycrocastSDK.ChatStatus, MycrocastSDK.MycrocastError?) -> ())
+  func leaveChat(streamId: Swift.Int)
+  func chatJoined(streamId: Swift.Int) -> Swift.Bool
+  func sendChatMessage(streamId: Swift.Int, message: Swift.String, callback: @escaping (Swift.Bool, MycrocastSDK.MycrocastError?) -> ())
+  func getChatMessages(streamId: Swift.Int) -> [MycrocastSDK.Message]
+  func getChatStatus(streamId: Swift.Int) -> MycrocastSDK.ChatStatus
+  func reportChatMessage(message: MycrocastSDK.Message, reason: MycrocastSDK.ReportReason, additionalInformation: Swift.String, callback: @escaping (Swift.Bool, MycrocastSDK.MycrocastError?) -> ())
+  func addObserver(delegate: MycrocastSDK.ChatDelegate)
+  func removeObserver(delegate: MycrocastSDK.ChatDelegate)
+}
+public protocol ChatDelegate {
+  func onMessage(_ message: MycrocastSDK.Message)
+  func onChatStatusChanged(_ streamId: Swift.Int, status: MycrocastSDK.ChatStatus)
+}
+public enum ChatStatus {
+  case enabled
+  case disabled
+  public static func == (a: MycrocastSDK.ChatStatus, b: MycrocastSDK.ChatStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ReportReason : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case racism
+  case homophobia
+  case sexism
+  case bullying
+  case intellectual
+  case other
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MycrocastSDK.ReportReason]
+  public typealias RawValue = Swift.String
+  public static var allCases: [MycrocastSDK.ReportReason] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol Rating {
+  func like(streamId: Swift.Int) -> MycrocastSDK.RatingError?
+  func dislike(streamId: Swift.Int) -> MycrocastSDK.RatingError?
+}
+public enum RatingError {
+  case not_found
+  case not_allowed
+  public static func == (a: MycrocastSDK.RatingError, b: MycrocastSDK.RatingError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Advertisements {
+  func onAdBannerClicked(_ stream: MycrocastSDK.LiveStream, advertisement: MycrocastSDK.MycrocastAdvertisement)
+  func getAdvertisement() -> MycrocastSDK.MycrocastAdvertisement?
+  func ignoreReceivedAdvertisements()
+  func addObserver(advertisementDelegate: MycrocastSDK.AdvertisementDelegate)
+  func removeObserver(advertisementDelegate: MycrocastSDK.AdvertisementDelegate)
+}
+extension MycrocastSDK.SessionState : Swift.Equatable {}
+extension MycrocastSDK.SessionState : Swift.Hashable {}
+extension MycrocastSDK.ErrorType : Swift.Equatable {}
+extension MycrocastSDK.ErrorType : Swift.Hashable {}
+extension MycrocastSDK.UserStreamRating : Swift.Equatable {}
+extension MycrocastSDK.UserStreamRating : Swift.Hashable {}
+extension MycrocastSDK.UserStreamRating : Swift.RawRepresentable {}
+extension MycrocastSDK.Sender : Swift.Equatable {}
+extension MycrocastSDK.Sender : Swift.Hashable {}
+extension MycrocastSDK.ChatStatus : Swift.Equatable {}
+extension MycrocastSDK.ChatStatus : Swift.Hashable {}
+extension MycrocastSDK.ReportReason : Swift.Equatable {}
+extension MycrocastSDK.ReportReason : Swift.Hashable {}
+extension MycrocastSDK.ReportReason : Swift.RawRepresentable {}
+extension MycrocastSDK.RatingError : Swift.Equatable {}
+extension MycrocastSDK.RatingError : Swift.Hashable {}

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SDKTest/Pods-SDKTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MycrocastSDK/MycrocastSDK.framework/MycrocastSDK

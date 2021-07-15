@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3c1aafc-f383-4be1-be1f-0e2733cf6f62" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/MycrocastSDK.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/MycrocastSDK.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SDK.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SDK.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SDKTest/SDKTest/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SDKTest/SDKTest/ViewController.swift" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_CCE63A17-6A30-44DD-ADB2-B3C39C0DCC67" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1nWKTggV3gzDLNY0bEwQPma31A5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SDKTest.xcworkspace" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SDKTest" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SDKTest" TARGET_NAME="SDKTest" CONFIG_NAME="Debug" SCHEME_NAME="SDKTest" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="SDKTest" RUN_TARGET_NAME="SDKTest" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3c1aafc-f383-4be1-be1f-0e2733cf6f62" name="Default Changelist" comment="" />
+      <created>1611500415138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611500415138</updated>
+      <workItem from="1611500416249" duration="27000" />
+      <workItem from="1617961568551" duration="23000" />
+      <workItem from="1619098011296" duration="985000" />
+      <workItem from="1625821143486" duration="871000" />
+      <workItem from="1626085495841" duration="448000" />
+      <workItem from="1626163581306" duration="14000" />
+      <workItem from="1626267642716" duration="3069000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

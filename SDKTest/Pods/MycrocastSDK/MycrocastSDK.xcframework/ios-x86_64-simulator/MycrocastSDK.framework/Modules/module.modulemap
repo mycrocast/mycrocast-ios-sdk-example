@@ -1,0 +1,21 @@
+framework module MycrocastSDK {
+    umbrella header "MycrocastSDK.h"
+
+    explicit module CLibgif {
+        private header "org_xiph_opus_decoderjni_OpusDecoder.h"
+        private header "opus.h"
+        private header "opus_header.h"
+        private header "opus_types.h"
+        private header "opus_defines.h"
+        private header "ogg.h"
+        private header "os_types.h"
+        private header "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/clang/include/inttypes.h"
+    }
+
+    export *
+}
+
+module MycrocastSDK.Swift {
+    header "MycrocastSDK-Swift.h"
+    requires objc
+}
