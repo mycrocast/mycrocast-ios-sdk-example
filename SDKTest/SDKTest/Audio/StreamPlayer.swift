@@ -17,6 +17,7 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
 
     private let inputFormat: AVAudioFormat
     private let outputFormat: AVAudioFormat
+    private let ratio: Double
 
     init() {
         self.audioEngine = AVAudioEngine()
@@ -26,14 +27,15 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
             self.inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 48000, channels: AVAudioChannelCount(1), interleaved: false)!
 
             self.converter = AVAudioConverter(from: inputFormat, to: outputFormat)!
-            self.converter.downmix = true
+            self.ratio =   outputFormat.sampleRate / inputFormat.sampleRate
+
             configureAudioSession()
 
             self.audioEngine.attach(self.playerNode)
-            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: self.outputFormat)
+            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: nil)
             self.audioEngine.prepare()
             try self.audioEngine.start()
-            self.playerNode.prepare(withFrameCount: 960)
+            self.playerNode.prepare(withFrameCount: AVAudioFrameCount(960))
         } catch {
             print("Player error: \(error)")
         }
@@ -50,15 +52,15 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
      - Parameter buffer:
      */
     func play(_ buffer: AVAudioPCMBuffer) {
-        let outputBuffer = AVAudioPCMBuffer(pcmFormat: self.outputFormat, frameCapacity: 960)!
+        let capacity = 960 * self.ratio
+        let outputBuffer = AVAudioPCMBuffer(pcmFormat: self.outputFormat, frameCapacity: AVAudioFrameCount(capacity))!
 
         var error: NSError? = nil
-
-        self.converter.convert(to: outputBuffer, error: &error) { inNumPackets, outStatus in
+       let result =  self.converter.convert(to: outputBuffer, error: &error) { inNumPackets, outStatus in
             outStatus.pointee = .haveData
             return buffer
         }
-        
+        outputBuffer.frameLength = AVAudioFrameCount(capacity)
         
         self.playerNode.scheduleBuffer(outputBuffer)
         self.playerNode.play()
@@ -68,6 +70,7 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback)
             try AVAudioSession.sharedInstance().setActive(true)
+            try AVAudioSession.sharedInstance().setPreferredSampleRate(48000)
         } catch {
         }
     }
@@ -84,5 +87,9 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
      */
     func onAdPlayFinished() {
         self.playerNode.volume = 1
+    }
+    
+    func setVolume(volume: Float) {
+        self.playerNode.volume = volume
     }
 }
