@@ -8,8 +8,11 @@ import MycrocastSDK
  */
 class ViewController: UIViewController, StreamsDelegate {
 
-    private static let YOUR_CUSTOMER_ID = "1625750816621_d338664f-7a2b-48d9-a601-5d4526b84b11" // replace with your customerId as visible in the mycrocast studio
-    private static let YOUR_API_KEY = "8LL6gRQeArhrp0bJ" // replace with your api key as visible in the mycrocast studio
+//    private static let YOUR_CUSTOMER_ID = "1625750816621_d338664f-7a2b-48d9-a601-5d4526b84b11" // replace with your customerId as visible in the mycrocast studio
+//    private static let YOUR_API_KEY = "8LL6gRQeArhrp0bJ" // replace with your api key as visible in the mycrocast studio
+
+    private static let YOUR_CUSTOMER_ID = "1567504890375_8741a554-c25e-428f-a807-a69bac373315-9999" //"aaaaa" // replace with your customerId as visible in the mycrocast studio
+    private static let YOUR_API_KEY = "fHDYOI1SDw8e5P12" // replace with your api key as visible in the mycrocast studio
 
     private let streamStack: UIStackView = UIStackView()
     private var cells: [Int: LiveStreamCell] = [:]

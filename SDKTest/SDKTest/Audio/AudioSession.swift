@@ -2,6 +2,10 @@ import Foundation
 import MycrocastSDK
 import AVFoundation
 
+protocol DelayChange {
+    func onChangedTotalDelay(delay: Int)
+}
+
 /**
  Example class representing a single audio session, meaning the play of
  a stream.
@@ -98,7 +102,7 @@ class AudioSession: StreamSessionDelegate, AdvertisementDelegate {
       If the stream is currently muted we start playing the mute music
      */
     func play() {
-        self.sessionControl.play(streamId: self.stream.id)
+        self.sessionControl.play(streamId: self.stream.id, bufferDuration: 2000, maxDelay: 300000)
         if (self.stream.muted) {
             do {
                 try self.muteMusicPlayer.playFromUrl(url: self.stream.muteMusicUrl)
@@ -132,5 +136,15 @@ class AudioSession: StreamSessionDelegate, AdvertisementDelegate {
      */
     func advertisementClicked(_ ad: MycrocastAdvertisement) {
         Mycrocast.shared.advertisements.onAdBannerClicked(self.stream, advertisement: ad)
+    }
+
+    /**
+     Callback that the currently configurable available delay has changed
+     - Parameter delay: the current maximum configurable delay
+     */
+    func onAvailableDelayChanged(_ delay: Int) {
+        Broadcaster.notify(DelayChange.self) { (delegate: DelayChange) in
+            delegate.onChangedTotalDelay(delay: delay)
+        }
     }
 }

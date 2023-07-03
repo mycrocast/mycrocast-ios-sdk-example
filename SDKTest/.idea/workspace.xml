@@ -2,21 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c1aafc-f383-4be1-be1f-0e2733cf6f62" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/MycrocastSDK.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/MycrocastSDK.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MycrocastSDK/MycrocastSDK.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SDK.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SDK.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SDKTest/SDKTest/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SDKTest/SDKTest/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDKTest.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/SDKTest (1).xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Assets.car" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Headers/MycrocastSDK-Swift.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Headers/MycrocastSDK-Swift.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64-apple-ios.swiftdoc" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64-apple-ios.swiftdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64-apple-ios.swiftinterface" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64-apple-ios.swiftinterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/arm64.swiftinterface" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/MycrocastSDK" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-arm64/MycrocastSDK.framework/MycrocastSDK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Assets.car" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Headers/MycrocastSDK-Swift.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Headers/MycrocastSDK-Swift.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/Modules/MycrocastSDK.swiftmodule/x86_64.swiftinterface" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/MycrocastSDK" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/MycrocastSDK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/MycrocastSDK/MycrocastSDK.xcframework/ios-x86_64-simulator/MycrocastSDK.framework/_CodeSignature/CodeResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest.xcodeproj/project.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest.xcodeproj/project.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/SDKTest.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/SDKTest.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest.xcodeproj/xcuserdata/sbeeckmann.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest.xcworkspace/xcuserdata/sbeeckmann.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest/Audio/StreamPlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest/Audio/StreamPlayer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDKTest/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SDKTest/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_CCE63A17-6A30-44DD-ADB2-B3C39C0DCC67" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SDKTest/Audio/AudioSession.swift" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pods/Target Support Files/Pods-SDKTest/Pods-SDKTest.debug.xcconfig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDKTest/State/AudioState.swift" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDKTest/ViewController.swift" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDKTest/SceneDelegate.swift" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDKTest/Info.plist" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Podfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDKTest/Audio/StreamPlayer.swift" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -35,8 +71,8 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/SDKTest.xcworkspace" />
   </component>
-  <component name="RunManager">
-    <configuration name="SDKTest" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SDKTest" TARGET_NAME="SDKTest" CONFIG_NAME="Debug" SCHEME_NAME="SDKTest" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="SDKTest" RUN_TARGET_NAME="SDKTest" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+  <component name="RunManager" selected="Application.SDKTest">
+    <configuration name="SDKTest (1)" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SDKTest" TARGET_NAME="SDKTest" CONFIG_NAME="Release" SCHEME_NAME="SDKTest (1)" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="SDKTest" RUN_TARGET_NAME="SDKTest" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
@@ -45,6 +81,19 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SDKTest" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SDKTest" TARGET_NAME="SDKTest" CONFIG_NAME="Debug" SCHEME_NAME="SDKTest" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="SDKTest" RUN_TARGET_NAME="SDKTest" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SDKTest" />
+      <item itemvalue="Application.SDKTest (1)" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,6 +110,16 @@
       <workItem from="1626085495841" duration="448000" />
       <workItem from="1626163581306" duration="14000" />
       <workItem from="1626267642716" duration="3069000" />
+      <workItem from="1646383182225" duration="902000" />
+      <workItem from="1646641292214" duration="163000" />
+      <workItem from="1646641492638" duration="594000" />
+      <workItem from="1649245933739" duration="9953000" />
+      <workItem from="1649259355205" duration="212000" />
+      <workItem from="1649316816976" duration="3165000" />
+      <workItem from="1649668472125" duration="11000" />
+      <workItem from="1650355955794" duration="382000" />
+      <workItem from="1650356438333" duration="289000" />
+      <workItem from="1650877765827" duration="1000" />
     </task>
     <servers />
   </component>
@@ -77,6 +136,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

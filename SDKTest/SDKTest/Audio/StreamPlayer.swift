@@ -22,17 +22,18 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
         self.audioEngine = AVAudioEngine()
         self.playerNode = AVAudioPlayerNode()
         do {
-            let _ = self.audioEngine.mainMixerNode
-            self.outputFormat = self.audioEngine.mainMixerNode.outputFormat(forBus: 0)
+            self.outputFormat = self.audioEngine.outputNode.outputFormat(forBus: 0)
             self.inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 48000, channels: AVAudioChannelCount(1), interleaved: false)!
 
             self.converter = AVAudioConverter(from: inputFormat, to: outputFormat)!
+            self.converter.downmix = true
             configureAudioSession()
 
             self.audioEngine.attach(self.playerNode)
-            self.audioEngine.connect(self.playerNode, to: self.audioEngine.mainMixerNode, format: nil)
+            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: self.outputFormat)
             self.audioEngine.prepare()
             try self.audioEngine.start()
+            self.playerNode.prepare(withFrameCount: 960)
         } catch {
             print("Player error: \(error)")
         }
@@ -51,11 +52,14 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
     func play(_ buffer: AVAudioPCMBuffer) {
         let outputBuffer = AVAudioPCMBuffer(pcmFormat: self.outputFormat, frameCapacity: 960)!
 
-        self.converter.convert(to: outputBuffer, error: nil) { inNumPackets, outStatus in
+        var error: NSError? = nil
+
+        self.converter.convert(to: outputBuffer, error: &error) { inNumPackets, outStatus in
             outStatus.pointee = .haveData
             return buffer
         }
-
+        
+        
         self.playerNode.scheduleBuffer(outputBuffer)
         self.playerNode.play()
     }

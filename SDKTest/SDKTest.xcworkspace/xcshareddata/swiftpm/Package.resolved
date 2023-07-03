@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mycrocastswiftsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mycrocast/mycrocastSwiftSDK",
+      "state" : {
+        "revision" : "41be023f44d07735367cf8a8ef4d608516fc78d6",
+        "version" : "1.30.0"
+      }
+    }
+  ],
+  "version" : 2
+}

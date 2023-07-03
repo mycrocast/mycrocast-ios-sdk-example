@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		2655A7CF25B0DAEC0030AFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2655A7CD25B0DAEC0030AFEB /* LaunchScreen.storyboard */; };
 		2655A7DA25B0DAEC0030AFEB /* SDKTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655A7D925B0DAEC0030AFEB /* SDKTestTests.swift */; };
 		2655A7E525B0DAEC0030AFEB /* SDKTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655A7E425B0DAEC0030AFEB /* SDKTestUITests.swift */; };
-		3424C3FE0C33C77361382851 /* Pods_SDKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC089D2D4D95E2E004A7EA6D /* Pods_SDKTest.framework */; };
 		8E3020200C844E2776D92601 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302D76C1EFF36C222B066A /* ChatController.swift */; };
 		8E30238A0981CB6A2F68B010 /* ChatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302E45FEF94ADC3460C182 /* ChatReport.swift */; };
 		8E3023BDF84C264210E4FA13 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302259B62AE1B9C2B0607B /* AppState.swift */; };
@@ -36,6 +35,7 @@
 		8E302E73D61BB9B5C8A0A97C /* GeneralDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302CCFE34AB081ADB04092 /* GeneralDescription.swift */; };
 		8E302F0F5D4A94132C4EF264 /* StreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3020784AADECEC9AF5A6CD /* StreamPlayer.swift */; };
 		8E302F181473B9E8A093166B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302F3A86EFBB06BE735649 /* ChatCell.swift */; };
+		BBA955722A52F85F00E32223 /* mycrocastSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BBA955712A52F85F00E32223 /* mycrocastSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +69,6 @@
 		2655A7E025B0DAEC0030AFEB /* SDKTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2655A7E425B0DAEC0030AFEB /* SDKTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKTestUITests.swift; sourceTree = "<group>"; };
 		2655A7E625B0DAEC0030AFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		281249E553C6A1C84B2F49AA /* Pods-SDKTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTestTests.debug.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTestTests/Pods-SDKTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		41A001A27DEF81D54D633230 /* Pods-SDKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest.debug.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTest/Pods-SDKTest.debug.xcconfig"; sourceTree = "<group>"; };
-		45D7762FE5C6874B72F32E25 /* Pods-SDKTest-SDKTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest-SDKTestUITests.release.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTest-SDKTestUITests/Pods-SDKTest-SDKTestUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5AE92D0180A60B6B7F31BA59 /* Pods-SDKTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTestTests.release.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTestTests/Pods-SDKTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E30205F51A8470FA14A3D27 /* LabelWithHint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithHint.swift; sourceTree = "<group>"; };
 		8E3020784AADECEC9AF5A6CD /* StreamPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamPlayer.swift; sourceTree = "<group>"; };
 		8E3020B9220FD00C81A7A307 /* StreamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerView.swift; sourceTree = "<group>"; };
@@ -94,9 +90,7 @@
 		8E302E45FEF94ADC3460C182 /* ChatReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatReport.swift; sourceTree = "<group>"; };
 		8E302F3A86EFBB06BE735649 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		8E302FF8269E30A8B966023A /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
-		BDC0989CC0FFF9250575BDD7 /* Pods-SDKTest-SDKTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest-SDKTestUITests.debug.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTest-SDKTestUITests/Pods-SDKTest-SDKTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D9EF734BE02DF12CAB7F6DD1 /* Pods-SDKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest.release.xcconfig"; path = "../SDKTest/Pods/Target Support Files/Pods-SDKTest/Pods-SDKTest.release.xcconfig"; sourceTree = "<group>"; };
-		EC089D2D4D95E2E004A7EA6D /* Pods_SDKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB64967E2A0BC62C002EF7EF /* MycrocastSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MycrocastSDK.xcframework; path = ../../mycrocastSDKSPM/frameworks/MycrocastSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3424C3FE0C33C77361382851 /* Pods_SDKTest.framework in Frameworks */,
+				BBA955722A52F85F00E32223 /* mycrocastSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,14 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		264E858825B0DBB90001C11F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EC089D2D4D95E2E004A7EA6D /* Pods_SDKTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2655A7B625B0DAEC0030AFEB = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +126,7 @@
 				2655A7D825B0DAEC0030AFEB /* SDKTestTests */,
 				2655A7E325B0DAEC0030AFEB /* SDKTestUITests */,
 				2655A7C025B0DAEC0030AFEB /* Products */,
-				264E858825B0DBB90001C11F /* Frameworks */,
-				AF8B98797A00408A822BC76A /* Pods */,
+				BB64967D2A0BC62B002EF7EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -279,18 +264,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AF8B98797A00408A822BC76A /* Pods */ = {
+		BB64967D2A0BC62B002EF7EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41A001A27DEF81D54D633230 /* Pods-SDKTest.debug.xcconfig */,
-				D9EF734BE02DF12CAB7F6DD1 /* Pods-SDKTest.release.xcconfig */,
-				BDC0989CC0FFF9250575BDD7 /* Pods-SDKTest-SDKTestUITests.debug.xcconfig */,
-				45D7762FE5C6874B72F32E25 /* Pods-SDKTest-SDKTestUITests.release.xcconfig */,
-				281249E553C6A1C84B2F49AA /* Pods-SDKTestTests.debug.xcconfig */,
-				5AE92D0180A60B6B7F31BA59 /* Pods-SDKTestTests.release.xcconfig */,
+				BB64967E2A0BC62C002EF7EF /* MycrocastSDK.xcframework */,
 			);
-			name = Pods;
-			path = ../Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,17 +279,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2655A7E925B0DAEC0030AFEB /* Build configuration list for PBXNativeTarget "SDKTest" */;
 			buildPhases = (
-				A725934CC788C698F955A980 /* [CP] Check Pods Manifest.lock */,
 				2655A7BB25B0DAEC0030AFEB /* Sources */,
 				2655A7BC25B0DAEC0030AFEB /* Frameworks */,
 				2655A7BD25B0DAEC0030AFEB /* Resources */,
-				F06529D70E3FDE3118B40057 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SDKTest;
+			packageProductDependencies = (
+				BBA955712A52F85F00E32223 /* mycrocastSDK */,
+			);
 			productName = SDKTest;
 			productReference = 2655A7BF25B0DAEC0030AFEB /* SDKTest.app */;
 			productType = "com.apple.product-type.application";
@@ -319,7 +299,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2655A7EC25B0DAEC0030AFEB /* Build configuration list for PBXNativeTarget "SDKTestTests" */;
 			buildPhases = (
-				CF4A0D20B5E19DBD948336BA /* [CP] Check Pods Manifest.lock */,
 				2655A7D125B0DAEC0030AFEB /* Sources */,
 				2655A7D225B0DAEC0030AFEB /* Frameworks */,
 				2655A7D325B0DAEC0030AFEB /* Resources */,
@@ -338,11 +317,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2655A7EF25B0DAEC0030AFEB /* Build configuration list for PBXNativeTarget "SDKTestUITests" */;
 			buildPhases = (
-				78F9B7EED397CA72A13FB0F6 /* [CP] Check Pods Manifest.lock */,
 				2655A7DC25B0DAEC0030AFEB /* Sources */,
 				2655A7DD25B0DAEC0030AFEB /* Frameworks */,
 				2655A7DE25B0DAEC0030AFEB /* Resources */,
-				D3DCAA8B038D20E615B38094 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +362,9 @@
 				Base,
 			);
 			mainGroup = 2655A7B625B0DAEC0030AFEB;
+			packageReferences = (
+				BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */,
+			);
 			productRefGroup = 2655A7C025B0DAEC0030AFEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,109 +401,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		78F9B7EED397CA72A13FB0F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SDKTest-SDKTestUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A725934CC788C698F955A980 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SDKTest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF4A0D20B5E19DBD948336BA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SDKTestTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3DCAA8B038D20E615B38094 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKTest-SDKTestUITests/Pods-SDKTest-SDKTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKTest-SDKTestUITests/Pods-SDKTest-SDKTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKTest-SDKTestUITests/Pods-SDKTest-SDKTestUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F06529D70E3FDE3118B40057 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKTest/Pods-SDKTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKTest/Pods-SDKTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKTest/Pods-SDKTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2655A7BB25B0DAEC0030AFEB /* Sources */ = {
@@ -635,6 +512,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -697,6 +575,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -720,10 +599,10 @@
 		};
 		2655A7EA25B0DAEC0030AFEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41A001A27DEF81D54D633230 /* Pods-SDKTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDSLQ2H2A7;
 				ENABLE_BITCODE = NO;
@@ -746,10 +625,10 @@
 		};
 		2655A7EB25B0DAEC0030AFEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9EF734BE02DF12CAB7F6DD1 /* Pods-SDKTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDSLQ2H2A7;
 				ENABLE_BITCODE = NO;
@@ -772,7 +651,6 @@
 		};
 		2655A7ED25B0DAEC0030AFEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 281249E553C6A1C84B2F49AA /* Pods-SDKTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -795,7 +673,6 @@
 		};
 		2655A7EE25B0DAEC0030AFEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AE92D0180A60B6B7F31BA59 /* Pods-SDKTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -818,7 +695,6 @@
 		};
 		2655A7F025B0DAEC0030AFEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDC0989CC0FFF9250575BDD7 /* Pods-SDKTest-SDKTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -839,7 +715,6 @@
 		};
 		2655A7F125B0DAEC0030AFEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45D7762FE5C6874B72F32E25 /* Pods-SDKTest-SDKTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -898,6 +773,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mycrocast/mycrocastSwiftSDK";
+			requirement = {
+				kind = exactVersion;
+				version = 1.30.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBA955712A52F85F00E32223 /* mycrocastSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */;
+			productName = mycrocastSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2655A7B725B0DAEC0030AFEB /* Project object */;
 }

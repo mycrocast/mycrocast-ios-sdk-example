@@ -15,7 +15,7 @@ import MycrocastSDK
  We show the current status of the chat (joined, and if enabled or disabled) we can only now the status of the chat after
  we joined. This is more for the developer intended and should probably not be displayed in any real app
  */
-class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
+class StreamerView: UIViewController, StreamsDelegate, ChatDelegate, DelayChange {
 
     private let header: UIImageView = UIImageView()
     private let streamerName: UILabel = UILabel()
@@ -37,6 +37,10 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
 
     private var liveStream: LiveStream;
 
+    private let currentConfiguredDelay: UILabel = UILabel()
+    private let totalAvailableDelay: UILabel = UILabel()
+
+
     init(liveStream: LiveStream) {
         self.liveStream = liveStream
         super.init(nibName: nil, bundle: nil)
@@ -50,6 +54,7 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createViews()
+        Broadcaster.register(DelayChange.self, observer: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -91,6 +96,7 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
 
         // clean unsubscribe to not receive updates anymore when the view disappears
         Mycrocast.shared.streams.removeObserver(self)
+        Broadcaster.unregister(DelayChange.self, observer: self)
     }
 
     private func createViews() {
@@ -218,6 +224,52 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
         let dislikeTouch = UITapGestureRecognizer(target: self, action: #selector(self.dislikePressed(_:)))
         dislikeWrapper.addGestureRecognizer(dislikeTouch)
 
+        let delayWrapper = UIView()
+        delayWrapper.translatesAutoresizingMaskIntoConstraints = false
+
+        let addDelay: UIButton = UIButton()
+        addDelay.translatesAutoresizingMaskIntoConstraints = false
+        addDelay.setTitle("+1s delay", for: .normal)
+        addDelay.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        addDelay.addTarget(self, action: #selector(self.onDelayAdded), for: .touchDown)
+
+        delayWrapper.addSubview(addDelay)
+
+        addDelay.topAnchor.constraint(equalTo: delayWrapper.topAnchor).isActive = true
+        addDelay.leadingAnchor.constraint(equalTo: delayWrapper.leadingAnchor).isActive = true
+
+        let removeDelay: UIButton = UIButton()
+        removeDelay.translatesAutoresizingMaskIntoConstraints = false
+        removeDelay.setTitle("-1s Delay", for: .normal)
+        removeDelay.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        removeDelay.addTarget(self, action: #selector(self.onDelayRemoved), for: .touchDown)
+
+        delayWrapper.addSubview(removeDelay)
+
+        removeDelay.topAnchor.constraint(equalTo: delayWrapper.topAnchor).isActive = true
+        removeDelay.trailingAnchor.constraint(equalTo: delayWrapper.trailingAnchor).isActive = true
+
+        self.currentConfiguredDelay.translatesAutoresizingMaskIntoConstraints = false
+        self.currentConfiguredDelay.text = String(Mycrocast.shared.sessionControl.currentDelay()) + " s"
+
+        delayWrapper.addSubview(self.currentConfiguredDelay)
+        self.currentConfiguredDelay.topAnchor.constraint(equalTo: addDelay.bottomAnchor, constant: 5).isActive = true
+        self.currentConfiguredDelay.bottomAnchor.constraint(equalTo: delayWrapper.bottomAnchor, constant: -5).isActive = true
+        self.currentConfiguredDelay.leadingAnchor.constraint(equalTo: delayWrapper.leadingAnchor).isActive = true
+
+        self.totalAvailableDelay.translatesAutoresizingMaskIntoConstraints = false
+        self.totalAvailableDelay.text = String(Mycrocast.shared.sessionControl.availableDelay()) + " s"
+
+        delayWrapper.addSubview(self.totalAvailableDelay)
+        self.totalAvailableDelay.topAnchor.constraint(equalTo: self.currentConfiguredDelay.topAnchor).isActive = true
+        self.totalAvailableDelay.bottomAnchor.constraint(equalTo: self.currentConfiguredDelay.bottomAnchor).isActive = true
+        self.totalAvailableDelay.trailingAnchor.constraint(equalTo: delayWrapper.trailingAnchor).isActive = true
+
+        lightWrapper.addSubview(delayWrapper)
+        delayWrapper.topAnchor.constraint(equalTo: dislikeWrapper.bottomAnchor, constant: 5).isActive = true
+        delayWrapper.leadingAnchor.constraint(equalTo: lightWrapper.leadingAnchor, constant: 10).isActive = true
+        delayWrapper.trailingAnchor.constraint(equalTo: lightWrapper.trailingAnchor, constant: -10).isActive = true
+
         let topView: UIView
 
         if (self.liveStream as? LiveScoringStream) != nil {
@@ -226,7 +278,7 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
             scoringView.translatesAutoresizingMaskIntoConstraints = false;
             lightWrapper.addSubview(scoringView)
 
-            scoringView.topAnchor.constraint(equalTo: dislikeWrapper.bottomAnchor, constant: 10).isActive = true
+            scoringView.topAnchor.constraint(equalTo: delayWrapper.bottomAnchor, constant: 10).isActive = true
             scoringView.leadingAnchor.constraint(equalTo: lightWrapper.leadingAnchor, constant: 10).isActive = true
             scoringView.trailingAnchor.constraint(equalTo: lightWrapper.trailingAnchor, constant: -10).isActive = true
 
@@ -239,7 +291,7 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
             lightWrapper.addSubview(description)
 
             description.backgroundColor = Colors.darkBackground
-            description.topAnchor.constraint(equalTo: dislikeWrapper.bottomAnchor, constant: 10).isActive = true
+            description.topAnchor.constraint(equalTo: delayWrapper.bottomAnchor, constant: 10).isActive = true
             description.leadingAnchor.constraint(equalTo: lightWrapper.leadingAnchor, constant: 10).isActive = true
             description.trailingAnchor.constraint(equalTo: lightWrapper.trailingAnchor, constant: -10).isActive = true
 
@@ -348,6 +400,29 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
         self.navigationController?.pushViewController(chatController, animated: true)
     }
 
+
+    /**
+     Callback executed when the delay button is clicked, which will add 1s of delay.
+     Moving further away from the live moment
+     - Parameter sender:
+     */
+    @objc private func onDelayAdded(_ sender: UIButton) {
+        let currentDelay = Mycrocast.shared.sessionControl.currentDelay() + 1000
+        Mycrocast.shared.sessionControl.setDelay(delay: currentDelay)
+        self.currentConfiguredDelay.text = String(currentDelay) + " ms"
+    }
+
+
+    /**
+     Callback executed when the delay removal button is clicked, this will remove a second delay moving closer to the live moment
+     - Parameter sender:
+     */
+    @objc private func onDelayRemoved(_ sender: UIButton) {
+        let currentDelay = Mycrocast.shared.sessionControl.currentDelay()
+        Mycrocast.shared.sessionControl.setDelay(delay: currentDelay - 1000)
+        self.currentConfiguredDelay.text = String(currentDelay - 1000) + " ms"
+    }
+
     private func updateView(stream: LiveStream) {
         DispatchQueue.main.async {
             self.streamDescription?.update(stream: stream)
@@ -411,4 +486,15 @@ class StreamerView: UIViewController, StreamsDelegate, ChatDelegate {
             }
         }
     }
+
+    /**
+     Receiver of the event that the maximum available delay has changed.
+     - Parameter delay: The new maximum
+     */
+    func onChangedTotalDelay(delay: Int) {
+        DispatchQueue.main.async {
+            self.totalAvailableDelay.text = String(delay) + " s"
+        }
+    }
+
 }
