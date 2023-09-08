@@ -780,7 +780,7 @@
 			repositoryURL = "https://github.com/mycrocast/mycrocastSwiftSDK";
 			requirement = {
 				kind = exactVersion;
-				version = 1.30.0;
+				version = 1.31.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
