@@ -29,9 +29,23 @@ class ViewController: UIViewController, StreamsDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        // check if someones is streaming
+        Mycrocast.shared.doesStreamExist(ViewController.YOUR_CUSTOMER_ID) {
+            result in
+            // if this was only part of a bigger application, The SDK should only be initialised when this returns true
+            if (result) {
+                print("Someone from my club is streaming")
+            }
+        }
+        
         // Do any additional setup after loading the view.
 
         // start the sdk with your credentials
+        // you should only initialise the sdk in your application
+        // in the audio area and not the main part
+        // see limitations and if you really need to know if someone streams
+        // use the above doesStreamExist 
         Mycrocast.shared.start(apiKey: ViewController.YOUR_API_KEY, customerToken: ViewController.YOUR_CUSTOMER_ID) { streams, error in
             if let error = error {
                 print(error)

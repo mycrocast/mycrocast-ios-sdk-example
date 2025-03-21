@@ -23,7 +23,7 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
         self.audioEngine = AVAudioEngine()
         self.playerNode = AVAudioPlayerNode()
         do {
-            self.outputFormat = self.audioEngine.outputNode.outputFormat(forBus: 0)
+            self.outputFormat = self.audioEngine.mainMixerNode.outputFormat(forBus: 0)
             self.inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 48000, channels: AVAudioChannelCount(1), interleaved: false)!
 
             self.converter = AVAudioConverter(from: inputFormat, to: outputFormat)!
@@ -32,7 +32,7 @@ public class StreamPlayer: AdPlayStateChangeDelegate {
             configureAudioSession()
 
             self.audioEngine.attach(self.playerNode)
-            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: nil)
+            self.audioEngine.connect(self.playerNode, to: self.audioEngine.mainMixerNode, format: nil)
             self.audioEngine.prepare()
             try self.audioEngine.start()
             self.playerNode.prepare(withFrameCount: AVAudioFrameCount(960))

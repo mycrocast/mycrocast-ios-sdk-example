@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,7 +35,7 @@
 		8E302E73D61BB9B5C8A0A97C /* GeneralDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302CCFE34AB081ADB04092 /* GeneralDescription.swift */; };
 		8E302F0F5D4A94132C4EF264 /* StreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3020784AADECEC9AF5A6CD /* StreamPlayer.swift */; };
 		8E302F181473B9E8A093166B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E302F3A86EFBB06BE735649 /* ChatCell.swift */; };
-		BBA955722A52F85F00E32223 /* mycrocastSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BBA955712A52F85F00E32223 /* mycrocastSDK */; };
+		BB70E7542B5167BD002D67D0 /* mycrocastSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BB70E7532B5167BD002D67D0 /* mycrocastSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA955722A52F85F00E32223 /* mycrocastSDK in Frameworks */,
+				BB70E7542B5167BD002D67D0 /* mycrocastSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +289,7 @@
 			);
 			name = SDKTest;
 			packageProductDependencies = (
-				BBA955712A52F85F00E32223 /* mycrocastSDK */,
+				BB70E7532B5167BD002D67D0 /* mycrocastSDK */,
 			);
 			productName = SDKTest;
 			productReference = 2655A7BF25B0DAEC0030AFEB /* SDKTest.app */;
@@ -363,7 +363,7 @@
 			);
 			mainGroup = 2655A7B625B0DAEC0030AFEB;
 			packageReferences = (
-				BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */,
+				BB70E7522B5167BD002D67D0 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */,
 			);
 			productRefGroup = 2655A7C025B0DAEC0030AFEB /* Products */;
 			projectDirPath = "";
@@ -775,20 +775,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */ = {
+		BB70E7522B5167BD002D67D0 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mycrocast/mycrocastSwiftSDK";
 			requirement = {
 				kind = exactVersion;
-				version = 1.31.0;
+				version = 1.40.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBA955712A52F85F00E32223 /* mycrocastSDK */ = {
+		BB70E7532B5167BD002D67D0 /* mycrocastSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBA955702A52F85E00E32223 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */;
+			package = BB70E7522B5167BD002D67D0 /* XCRemoteSwiftPackageReference "mycrocastSwiftSDK" */;
 			productName = mycrocastSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
